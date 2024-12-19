@@ -20,6 +20,10 @@ jobs:
       with:
         java-version: '21'
         distribution: 'temurin'
+    - name: Setup Chrome with extra capabilities
+      uses: browser-actions/setup-chrome@v1.4.0
+      with:
+      chrome-version: latest
 
     - name: Grant execute permission for Gradle Wrapper
       run: chmod +x ./gradlew
